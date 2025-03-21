@@ -1,7 +1,38 @@
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script type="text/markdown" id="markdown-content">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello word</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <script type="text/markdown" id="markdown-content">
+# Tilte
 
-Hello World!
-## The Next
+Paragram......
 
-</script>
+
+- item1
+- item2
+
+[Link sample](https://example.com)
+    </script>
+
+Bus is coming,be prepared~
+<pre>
+================\----|
+[] [] [] [] [] o|    /
+===⭕️======⭕️====]
+</pre>
+    <div id="markdown-output"></div>
+
+    <script>
+        const markdownContent = document.getElementById('markdown-content').textContent;
+
+        const htmlContent = marked.parse(markdownContent);
+
+        document.getElementById('markdown-output').innerHTML = htmlContent;
+    </script>
+</body>
+</html>
